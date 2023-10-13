@@ -63,4 +63,12 @@ def test_can_set(board):
     assert board1.can_set((6, 4), -1) == False
     assert board1.can_set((6, 4), 1) == False
     assert board1.can_set((4, 1), -1) == False
-
+    assert board2.can_set((5, 1), -1) == True
+    assert board2.can_set((5, 2), -1) == True
+    assert board2.can_set((1, 4), 1) == True
+    assert board2.can_set((5, 5), -1) == False
+    assert board2.can_set((2, 4), -1) == False
+    assert board2.can_set((6, 4), -1) == False
+    assert board2.can_set((6, 4), 1) == False
+    assert board2.can_set((4, 1), -1) == False
+    assert board2.can_set((5, 1), -1) == True
