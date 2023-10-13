@@ -10,9 +10,9 @@ class Board:
                       [0, 0, 0, 0, 0, 0, 0, 0]]
 
     def search_color(self, pos, color):
+        y, x = pos
         if self.board[y][x] != 0:
             return []
-        y, x = pos
         other_color = color * -1
         l = []
         for i in range(-1, 2):
