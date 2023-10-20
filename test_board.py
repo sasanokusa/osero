@@ -65,4 +65,4 @@ def test_can_set(board):
     assert board1.can_set((4, 1), -1) == []
     assert board2.can_set((6, 5), 1) == [(-1, 0)]
     assert board2.can_set((1, 4), 1) == [(1, -1)]
-    assert board1.can_set((2, 0), -1) == []
+    assert board2.can_set((2, 0), -1) == []
