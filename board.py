@@ -27,8 +27,9 @@ class Board:
     def can_set(self, pos, color):
         y0, x0 = pos
         search_color_list = self.search_color(pos, color)
+        l = []
         if search_color_list == []:
-            return False
+            return l
         for i in range(len(search_color_list)):
             direction = search_color_list[i]
             for n in range(2, 8, 1):
@@ -37,8 +38,8 @@ class Board:
                 if not 0 <= x <= 7 or not 0 <= y <= 7:
                     break
                 if self.board[y][x] == color:
-                    return True
-        return False
+                    l.append(direction)
+        return l
 
 if __name__ == "__main__":
     pass
